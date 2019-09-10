@@ -1,10 +1,11 @@
 .App {
   height: 640px;
   border: 1px solid blue;
-  width: 50%;
+  width: 30%;
   margin: 20% auto;
   font-family: Arial, Helvetica, sans-serif;
   opacity: 0.7;
+  overflow: scroll;
 }
 
 .display-input {

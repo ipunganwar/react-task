@@ -2,10 +2,6 @@
 import { connect } from 'react-redux';
 import Calculator from './units';
 import {
-  sumInput,
-  setClear,
-  setChangeValue,
-  setOperations,
   checkSymbol,
   checkChangeOperation,
   checkDotInLastIndex,
@@ -15,6 +11,13 @@ import {
   removeZeroIndexOne,
 } from './functions';
 
+import {
+  sumInput,
+  setClear,
+  setChangeValue,
+  setOperations,
+} from './reducers';
+
 function mapStateToProps(props) {
   return props;
 }
@@ -23,7 +26,6 @@ function mapDispatchToProps(dispatch) {
     handleDigits: (num, value) => {
       const addToValue = value.concat(num);
       const cleaningValue = removeZeroIndexOne(addToValue);
-
       dispatch(setChangeValue(cleaningValue));
     },
     handleOperations: (operation, num) => {
